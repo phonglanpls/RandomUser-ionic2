@@ -1,0 +1,71 @@
+<ion-header>
+
+  <ion-navbar color="bluegrey500">
+    <ion-title class="capitalize">{{user.name.first}} {{user.name.last}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-avatar>
+    <img class="center" src={{user.picture.large}}>
+  </ion-avatar>
+
+  <!-- Person Card -->
+  <ion-card text-wrap>
+    <ion-card-header>
+      Person
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <p class="capitalize">{{user.name.title}}. {{user.name.first}} {{user.name.last}}</p>
+      </ion-item>
+      <ion-item>
+        <p>Day of Birth: {{user.dob}}</p>
+      </ion-item>
+      <ion-item>
+        <p>Nationality: {{user.nat}}</p>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Contact Card -->
+  <ion-card>
+    <ion-card-header>
+      Contact
+    </ion-card-header>
+    <ion-card-content text-wrap>
+      <ion-item>
+        <ion-icon name="mail" item-left></ion-icon><p item-left>{{user.email}}</p>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="phone-portrait" item-left></ion-icon><p item-left>{{user.cell}}</p>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="call" item-left></ion-icon><p item-left>{{user.phone}}</p>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Location Card -->
+  <ion-card>
+    <ion-card-header>
+      Location
+    </ion-card-header>
+    <ion-card-content text-wrap>
+      <ion-item>
+        <p class="capitalize">State: {{user.location.state}}, {{user.nat}}</p>
+      </ion-item>
+      <ion-item>
+        <p class="capitalize">City: {{user.location.city}}</p>
+      </ion-item>
+      <ion-item>
+        <p class="capitalize">Postcode: {{user.location.postcode}}</p>
+      </ion-item>
+      <ion-item>
+        <p class="capitalize">Street: {{user.location.street}}</p>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
